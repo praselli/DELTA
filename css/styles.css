@@ -1,0 +1,291 @@
+
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 200px auto;
+    grid-template-rows: auto 180px 5px 70px 20px auto;
+}
+
+.boxLogo {
+    width: 200px;
+    height: 180px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    /*border: 1px solid black;*/
+    position: relative;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.franja1 {
+    position: absolute;
+    height: 100%;
+    left: -100px;
+    z-index: 2;
+    filter: drop-shadow(0px 4px 5px black);
+
+    animation: franja1;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+@keyframes franja1 {
+    
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: translateY(0);
+    }
+}
+
+.franja2 {
+    position: absolute;
+    height: 72.3%;
+    right: 100px;
+    bottom: 0;
+    z-index: 1;
+    filter: drop-shadow(0px 4px 5px black);
+
+    animation: franja2;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+@keyframes franja2 {
+    
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+        transform: translateY(0);
+    }
+}
+
+.franja3 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+    filter: drop-shadow(0px 4px 5px black);
+
+    animation: franja3;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+@keyframes franja3 {
+    
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@font-face {
+    font-family: fontLogoDelta;
+    src: url(../fonts/corbelb.ttf);
+  }
+
+.deltaTextBox {
+    width: 200px;
+    height: 70px;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+
+    grid-column-start: 2;
+    grid-row-start: 4;
+
+
+}
+
+.detaText {
+    font-family: fontLogoDelta;
+    font-size: 70px;
+    color: #0a2c48;
+    font-weight: 900;
+    text-align: center;
+    opacity: 0;
+
+    transition: 1s;
+}
+
+.d {
+    grid-column-start: 1;
+    opacity: 0;
+
+    animation: letterD;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;   
+}
+
+@keyframes letterD {
+    
+    0% {
+        opacity: 0;
+        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+    }
+}
+
+.e {
+    grid-column-start: 2;
+    opacity: 0;
+
+    animation: letterE;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.4s;   
+}
+
+@keyframes letterE {
+    
+    0% {
+        opacity: 0;
+        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+    }
+}
+
+.l {
+    grid-column-start: 3;
+    opacity: 0;
+
+    animation: letterL;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.8s;   
+}
+
+@keyframes letterL {
+    
+    0% {
+        opacity: 0;
+        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+    }
+}
+
+.t {
+    grid-column-start: 4;
+    opacity: 0;
+
+    animation: letterT;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.2s;   
+}
+
+@keyframes letterT {
+    
+    0% {
+        opacity: 0;
+        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+    }
+}
+
+.a {
+    grid-column-start: 5;
+    opacity: 0;
+
+    animation: letterA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.6s;   
+}
+
+@keyframes letterA {
+    
+    0% {
+        opacity: 0;
+        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+    }
+}
+
+
+.desarrolladoraText {
+    font-family: fontLogoDelta;
+    font-size: 23px;
+    color: #0d385c;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(5px);
+
+    grid-column-start: 2;
+    grid-row-start: 5;
+
+    animation: desarrolladora;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;   
+}
+
+@keyframes desarrolladora {
+    
+    0% {
+        opacity: 0;
+        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+    }
+}
