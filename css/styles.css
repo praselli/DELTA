@@ -137,7 +137,6 @@ body {
     font-size: 70px;
     color: #0a2c48;
     font-weight: 900;
-    text-align: center;
     opacity: 0;
 
     transition: 1s;
@@ -146,6 +145,7 @@ body {
 .d {
     grid-column-start: 1;
     opacity: 0;
+    transform: translateX(-5px);
 
     animation: letterD;
     animation-duration: 2s;
@@ -169,6 +169,7 @@ body {
 .e {
     grid-column-start: 2;
     opacity: 0;
+    transform: translateX(-5px);
 
     animation: letterE;
     animation-duration: 1s;
@@ -192,6 +193,7 @@ body {
 .l {
     grid-column-start: 3;
     opacity: 0;
+    transform: translateX(-5px);
 
     animation: letterL;
     animation-duration: 1s;
@@ -215,6 +217,7 @@ body {
 .t {
     grid-column-start: 4;
     opacity: 0;
+    transform: translateX(-5px);
 
     animation: letterT;
     animation-duration: 1s;
@@ -238,6 +241,7 @@ body {
 .a {
     grid-column-start: 5;
     opacity: 0;
+    transform: translateX(-5px);
 
     animation: letterA;
     animation-duration: 1s;
@@ -266,7 +270,7 @@ body {
     font-weight: 700;
     text-align: center;
     opacity: 0;
-    transform: translateX(5px);
+
 
     grid-column-start: 2;
     grid-row-start: 5;
