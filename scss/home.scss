@@ -1,0 +1,42 @@
+
+
+.masterBoxHome {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 0;
+
+    animation-name: backgroundSlide;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+
+    transition: 2s;
+    
+}
+
+/* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
+
+@keyframes backgroundSlide {
+
+    0% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+
+    17% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+
+    20% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);}
+
+    37% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);}
+
+    40% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);}
+
+    57% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);}
+    
+    60% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);}
+
+    77% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);}
+
+    80% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);}
+
+    97% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);}
+
+    100% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+}
