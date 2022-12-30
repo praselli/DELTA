@@ -13,26 +13,28 @@
 
     transition: 2s;
     display: grid;
-    grid-template-columns: 50px 200px 20px 350px 50px auto 20px;
-    grid-template-rows: 70px 100px 30px 90px 10px 40px 1px auto;
+    grid-template-columns: 25px 100px 10px 175px 25px auto 10px;
+    grid-template-rows: 70px 50px 15px 45px 5px 20px 5px auto;
 
     /* 
     grid-template-columns:
-        50px: espacio vacio
-        200px: ancho logo
-        400px: ancho deltaBox
-        50px: espacio vacio
+        25px: espacio vacio
+        100px: ancho logo
+        10px: margen
+        245px: ancho deltaBox
+        25px: espacio vacio
         auto: espacio informacion home
+        10px: margen
     
     grid-template-rows:
         70px: header
-        auto: espacio vacio
+        50: espacio vacio
         --------------------
-        30px: margen
-        90px: DELTA
-        10px: margen
-        40px: DESARROLLADORA
-        10px: margen
+        15px: margen
+        45px: DELTA
+        5px: margen
+        20px: DESARROLLADORA
+        5px: margen
         --------------------
         auto: espacio vacio
     */
@@ -66,8 +68,8 @@
 }
 
 .boxLogo {
-    width: 200px;
-    height: 180px;
+    width: 100px;
+    height: 90px;
     grid-column-start: 2;
     grid-row: 3 / 8;
 
@@ -84,7 +86,7 @@
 .franja1 {
     position: absolute;
     height: 100%;
-    left: -100px;
+    left: -50px;
     z-index: 3;
     filter: drop-shadow(0px 4px 5px black);
 
@@ -94,7 +96,7 @@
     animation-delay: 1s;
     
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
 }
 
 @keyframes franja1 {
@@ -113,7 +115,7 @@
 .franja2 {
     position: absolute;
     height: 72.3%;
-    right: 100px;
+    right: 50px;
     bottom: 0;
     z-index: 2;
     filter: drop-shadow(0px 4px 5px black);
@@ -124,7 +126,7 @@
     animation-delay: 1s;
     
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-50px);
 }
 
 @keyframes franja2 {
@@ -153,7 +155,7 @@
     animation-delay: 1s;
     
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-50px);
 }
 
 @keyframes franja3 {
@@ -169,20 +171,18 @@
 }
 
 .deltaTextBox {
-    width: 350px;
-    height: 90px;
+    width: 175px;
+    height: 45px;
 
     display: grid;
     grid-template-columns: auto auto auto auto auto;
 
     grid-column-start: 4;
     grid-row-start: 4;
-
-
 }
 
 .detaText {
-    height: 90px;
+    height: 45px;
 
     top: 0;
     bottom: 0;
@@ -220,7 +220,7 @@
 .e {
     grid-column-start: 2;
     opacity: 0;
-    transform: translateX(8px);
+    transform: translateX(4px);
 
     animation: letterE;
     animation-duration: 1s;
@@ -244,7 +244,7 @@
 .l {
     grid-column-start: 3;
     opacity: 0;
-    transform: translateX(16px);
+    transform: translateX(8px);
 
     animation: letterL;
     animation-duration: 1s;
@@ -291,7 +291,7 @@
 .a {
     grid-column-start: 5;
     opacity: 0;
-    transform: translateX(-13px);
+    transform: translateX(-6px);
 
     animation: letterA;
     animation-duration: 1s;
@@ -316,8 +316,10 @@
 .desarrolladoraText {
     width: 98%;
 
+
+
     margin: auto;
-    transform: translateX(5px);
+    transform: translateX(2px);
     opacity: 0;
 
     grid-column-start: 4;

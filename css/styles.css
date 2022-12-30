@@ -20,25 +20,27 @@ body {
   animation-iteration-count: infinite;
   transition: 2s;
   display: grid;
-  grid-template-columns: 50px 200px 20px 350px 50px auto 20px;
-  grid-template-rows: 70px 100px 30px 90px 10px 40px 1px auto;
+  grid-template-columns: 25px 100px 10px 175px 25px auto 10px;
+  grid-template-rows: 70px 50px 15px 45px 5px 20px 5px auto;
   /* 
   grid-template-columns:
-      50px: espacio vacio
-      200px: ancho logo
-      400px: ancho deltaBox
-      50px: espacio vacio
+      25px: espacio vacio
+      100px: ancho logo
+      10px: margen
+      245px: ancho deltaBox
+      25px: espacio vacio
       auto: espacio informacion home
+      10px: margen
 
   grid-template-rows:
       70px: header
-      auto: espacio vacio
+      50: espacio vacio
       --------------------
-      30px: margen
-      90px: DELTA
-      10px: margen
-      40px: DESARROLLADORA
-      10px: margen
+      15px: margen
+      45px: DELTA
+      5px: margen
+      20px: DESARROLLADORA
+      5px: margen
       --------------------
       auto: espacio vacio
   */
@@ -81,8 +83,8 @@ body {
   }
 }
 .boxLogo {
-  width: 200px;
-  height: 180px;
+  width: 100px;
+  height: 90px;
   grid-column-start: 2;
   grid-row: 3/8;
   /*border: 1px solid black;*/
@@ -97,7 +99,7 @@ body {
 .franja1 {
   position: absolute;
   height: 100%;
-  left: -100px;
+  left: -50px;
   z-index: 3;
   filter: drop-shadow(0px 4px 5px black);
   animation: franja1;
@@ -105,7 +107,7 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 1s;
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(50px);
 }
 
 @keyframes franja1 {
@@ -121,7 +123,7 @@ body {
 .franja2 {
   position: absolute;
   height: 72.3%;
-  right: 100px;
+  right: 50px;
   bottom: 0;
   z-index: 2;
   filter: drop-shadow(0px 4px 5px black);
@@ -130,7 +132,7 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 1s;
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-50px);
 }
 
 @keyframes franja2 {
@@ -154,7 +156,7 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 1s;
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(-50px);
 }
 
 @keyframes franja3 {
@@ -167,8 +169,8 @@ body {
   }
 }
 .deltaTextBox {
-  width: 350px;
-  height: 90px;
+  width: 175px;
+  height: 45px;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-column-start: 4;
@@ -176,7 +178,7 @@ body {
 }
 
 .detaText {
-  height: 90px;
+  height: 45px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -208,7 +210,7 @@ body {
 .e {
   grid-column-start: 2;
   opacity: 0;
-  transform: translateX(8px);
+  transform: translateX(4px);
   animation: letterE;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -228,7 +230,7 @@ body {
 .l {
   grid-column-start: 3;
   opacity: 0;
-  transform: translateX(16px);
+  transform: translateX(8px);
   animation: letterL;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -267,7 +269,7 @@ body {
 .a {
   grid-column-start: 5;
   opacity: 0;
-  transform: translateX(-13px);
+  transform: translateX(-6px);
   animation: letterA;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -287,7 +289,7 @@ body {
 .desarrolladoraText {
   width: 98%;
   margin: auto;
-  transform: translateX(5px);
+  transform: translateX(2px);
   opacity: 0;
   grid-column-start: 4;
   grid-row-start: 6;
@@ -407,6 +409,210 @@ header:hover {
 @font-face {
   font-family: Cavilant;
   src: url(../fonts/Cavilant.otf);
+}
+@media (min-width: 500px) {
+  .masterBoxIndex {
+    display: grid;
+    grid-template-columns: 35px 140px 14px 245px 35px auto 14px;
+    grid-template-rows: 70px 80px 21px 63px 7px 28px 7px auto;
+    /* 
+    grid-template-columns:
+        35px: espacio vacio
+        140px: ancho logo
+        14: margen
+        245px: ancho deltaBox
+        35px: espacio vacio
+        auto: espacio informacion home
+        14px: margen
+
+    grid-template-rows:
+        70px: header
+        80px: espacio vacio
+        --------------------
+        21px: margen
+        63px: DELTA
+        7px: margen
+        28px: DESARROLLADORA
+        7px: margen
+        --------------------
+        auto: espacio vacio
+    */
+  }
+  /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
+  @keyframes backgroundSlide {
+    0% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    }
+    17% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    }
+    20% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+    }
+    37% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+    }
+    40% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+    }
+    57% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+    }
+    60% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+    }
+    77% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+    }
+    80% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+    }
+    97% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+    }
+    100% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    }
+  }
+  .boxLogo {
+    width: 140px;
+    height: 126px;
+    grid-column-start: 2;
+    grid-row: 3/8;
+  }
+  .franja1 {
+    left: -70px;
+    transform: translateY(70px);
+  }
+  .franja2 {
+    right: 70px;
+    transform: translateY(-70px);
+  }
+  .franja3 {
+    transform: translateX(-70px);
+  }
+  .deltaTextBox {
+    width: 245px;
+    height: 63px;
+  }
+  .detaText {
+    height: 63px;
+  }
+  .e {
+    transform: translateX(6px);
+  }
+  .l {
+    transform: translateX(12px);
+  }
+  .a {
+    transform: translateX(-9px);
+  }
+  .desarrolladoraText {
+    transform: translateX(3px);
+  }
+}
+@media (min-width: 690px) {
+  /* - - - - - - - INDEX - - - - - - - */
+  .masterBoxIndex {
+    display: grid;
+    grid-template-columns: 50px 200px 20px 350px 50px auto 20px;
+    grid-template-rows: 70px 100px 30px 90px 10px 40px 10px auto;
+    /* 
+    grid-template-columns:
+        50px: espacio vacio
+        200px: ancho logo
+        20px: margen
+        350px: ancho deltaBox
+        50px: espacio vacio
+        auto: espacio informacion home
+        20px: margen
+
+    grid-template-rows:
+        70px: header
+        auto: espacio vacio
+        --------------------
+        30px: margen
+        90px: DELTA
+        10px: margen
+        40px: DESARROLLADORA
+        10px: margen
+        --------------------
+        auto: espacio vacio
+    */
+  }
+  /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
+  @keyframes backgroundSlide {
+    0% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    }
+    17% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    }
+    20% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+    }
+    37% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+    }
+    40% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+    }
+    57% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+    }
+    60% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+    }
+    77% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+    }
+    80% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+    }
+    97% {
+      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+    }
+    100% {
+      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    }
+  }
+  .boxLogo {
+    width: 200px;
+    height: 180px;
+    grid-column-start: 2;
+    grid-row: 3/8;
+  }
+  .franja1 {
+    left: -100px;
+    transform: translateY(100px);
+  }
+  .franja2 {
+    right: 100px;
+    transform: translateY(-100px);
+  }
+  .franja3 {
+    width: 100%;
+    transform: translateX(-100px);
+  }
+  .deltaTextBox {
+    width: 350px;
+    height: 90px;
+  }
+  .detaText {
+    height: 90px;
+  }
+  .e {
+    transform: translateX(8px);
+  }
+  .l {
+    transform: translateX(16px);
+  }
+  .a {
+    transform: translateX(-13px);
+  }
+  .desarrolladoraText {
+    transform: translateX(5px);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
