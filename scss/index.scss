@@ -1,18 +1,76 @@
 
 
 .masterBoxIndex {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+
+    background-size: cover;
+    z-index: 0;
+
+    animation-name: backgroundSlide;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+
+    transition: 2s;
     display: grid;
-    grid-template-columns: auto 200px auto;
-    grid-template-rows: auto 180px 5px 70px 20px 80px auto;
+    grid-template-columns: 50px 200px 20px 350px 50px auto 20px;
+    grid-template-rows: 70px 100px 30px 90px 10px 40px 1px auto;
+
+    /* 
+    grid-template-columns:
+        50px: espacio vacio
+        200px: ancho logo
+        400px: ancho deltaBox
+        50px: espacio vacio
+        auto: espacio informacion home
+    
+    grid-template-rows:
+        70px: header
+        auto: espacio vacio
+        --------------------
+        30px: margen
+        90px: DELTA
+        10px: margen
+        40px: DESARROLLADORA
+        10px: margen
+        --------------------
+        auto: espacio vacio
+    */
+}
+
+/* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
+
+@keyframes backgroundSlide {
+
+    0% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+
+    17% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+
+    20% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);}
+
+    37% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);}
+
+    40% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);}
+
+    57% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);}
+    
+    60% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);}
+
+    77% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);}
+
+    80% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);}
+
+    97% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);}
+
+    100% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
 }
 
 .boxLogo {
     width: 200px;
     height: 180px;
     grid-column-start: 2;
-    grid-row-start: 2;
+    grid-row: 3 / 8;
+
     /*border: 1px solid black;*/
     position: relative;
 
@@ -27,7 +85,7 @@
     position: absolute;
     height: 100%;
     left: -100px;
-    z-index: 2;
+    z-index: 3;
     filter: drop-shadow(0px 4px 5px black);
 
     animation: franja1;
@@ -57,7 +115,7 @@
     height: 72.3%;
     right: 100px;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     filter: drop-shadow(0px 4px 5px black);
 
     animation: franja2;
@@ -86,7 +144,7 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    z-index: 0;
+    z-index: 1;
     filter: drop-shadow(0px 4px 5px black);
 
     animation: franja3;
@@ -110,38 +168,35 @@
     }
 }
 
-@font-face {
-    font-family: fontLogoDelta;
-    src: url(../fonts/corbelb.ttf);
-  }
-
 .deltaTextBox {
-    width: 200px;
-    height: 70px;
+    width: 350px;
+    height: 90px;
 
     display: grid;
     grid-template-columns: auto auto auto auto auto;
 
-    grid-column-start: 2;
+    grid-column-start: 4;
     grid-row-start: 4;
 
 
 }
 
 .detaText {
-    font-family: fontLogoDelta;
-    font-size: 70px;
-    color: #0a2c48;
-    font-weight: 900;
-    opacity: 0;
+    height: 90px;
 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    opacity: 0;
     transition: 1s;
 }
 
 .d {
     grid-column-start: 1;
     opacity: 0;
-    transform: translateX(-5px);
 
     animation: letterD;
     animation-duration: 2s;
@@ -153,19 +208,19 @@
     
     0% {
         opacity: 0;
-        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+        filter: drop-shadow(-7px 12px 34px rgba(0,0,0,0));
     }
 
     100% {
         opacity: 1;
-        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+        filter: drop-shadow( 0px 3px 5px rgba(0,0,0,0.62));
     }
 }
 
 .e {
     grid-column-start: 2;
     opacity: 0;
-    transform: translateX(-5px);
+    transform: translateX(8px);
 
     animation: letterE;
     animation-duration: 1s;
@@ -177,19 +232,19 @@
     
     0% {
         opacity: 0;
-        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+        filter: drop-shadow(-7px 12px 34px rgba(0,0,0,0));
     }
 
     100% {
         opacity: 1;
-        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+        filter: drop-shadow( 0px 3px 5px rgba(0,0,0,0.62));
     }
 }
 
 .l {
     grid-column-start: 3;
     opacity: 0;
-    transform: translateX(-5px);
+    transform: translateX(16px);
 
     animation: letterL;
     animation-duration: 1s;
@@ -201,19 +256,18 @@
     
     0% {
         opacity: 0;
-        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+        filter: drop-shadow(-7px 12px 34px rgba(0,0,0,0));
     }
 
     100% {
         opacity: 1;
-        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+        filter: drop-shadow( 0px 3px 5px rgba(0,0,0,0.62));
     }
 }
 
 .t {
     grid-column-start: 4;
     opacity: 0;
-    transform: translateX(-5px);
 
     animation: letterT;
     animation-duration: 1s;
@@ -225,19 +279,19 @@
     
     0% {
         opacity: 0;
-        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+        filter: drop-shadow(-7px 12px 34px rgba(0,0,0,0));
     }
 
     100% {
         opacity: 1;
-        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+        filter: drop-shadow( 0px 3px 5px rgba(0,0,0,0.62));
     }
 }
 
 .a {
     grid-column-start: 5;
     opacity: 0;
-    transform: translateX(-5px);
+    transform: translateX(-13px);
 
     animation: letterA;
     animation-duration: 1s;
@@ -249,71 +303,41 @@
     
     0% {
         opacity: 0;
-        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+        filter: drop-shadow(-7px 12px 34px rgba(0,0,0,0));
     }
 
     100% {
         opacity: 1;
-        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+        filter: drop-shadow( 0px 3px 5px rgba(0,0,0,0.62));
     }
 }
 
 
 .desarrolladoraText {
-    font-family: fontLogoDelta;
-    font-size: 23px;
-    color: #0d385c;
-    font-weight: 700;
-    text-align: center;
+    width: 98%;
+
+    margin: auto;
+    transform: translateX(5px);
     opacity: 0;
 
-
-    grid-column-start: 2;
-    grid-row-start: 5;
+    grid-column-start: 4;
+    grid-row-start: 6;
 
     animation: desarrolladora;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 4s;   
+    animation-delay: 4s;
 }
 
 @keyframes desarrolladora {
     
     0% {
         opacity: 0;
-        text-shadow: -7px 12px 34px rgba(0,0,0,0);
+        filter: drop-shadow(-7px 12px 34px rgba(0,0,0,0));
     }
 
     100% {
         opacity: 1;
-        text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
+        filter: drop-shadow( 0px 2px 4px rgba(0, 0, 0, 0.356));
     }
-}
-
-.comenzarButton {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 23px;
-    color: #414141;
-    text-align: center;
-    text-decoration: none;
-    opacity: 0;
-    text-shadow: 0px 3px 5px rgba(0,0,0,0.62);
-    line-height: 100px;
-
-
-    grid-column-start: 2;
-    grid-row-start: 6;
-
-    animation: comenzarButton;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-delay: 6s;   
-}
-
-@keyframes comenzarButton {
-    
-    0% {opacity: 0;}
-
-    100% {opacity: 1;}
 }
