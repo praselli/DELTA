@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    height: 70px;
+    height: 60px;
     z-index: 2;
     border-bottom: 3px solid rgba(56, 56, 56, 0.212);
     top: 0;
@@ -11,20 +11,16 @@ header {
     transition: 1s;
 
     display: grid;
-    grid-template-columns: 20px 170px auto 380px 20px;
-    grid-template-rows: 10px 50px 10px;
+    grid-template-columns: 20px 140px auto 40px 20px;
+    grid-template-rows: 10px 40px 10px;
 
     grid-column: 1 / -1;
 
-    &:hover {
-        background-color: #ffffffa9;
-        box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.39);
-    }
 }
 
 .headerLogoA {
-    width: 170px;
-    height: 50px;
+    width: 140px;
+    height: 40px;
 
     position: relative;
 
@@ -33,7 +29,7 @@ header {
 }
 
 .headerLogo {
-    width: 170px;
+    width: 140px;
     position: absolute;
 
     top: 0;
@@ -42,65 +38,78 @@ header {
     right: 0;
     margin: auto;
 
-    &:hover {
-        filter: drop-shadow(0px 0px 8px white);
-    }
 }
 
-.itemMenu {
+.headerNavContainer, .headerItems, .itemAcerca, .itemDesarrollos, .itemContacto, .menuLink {
     display: none;
 }
 
-.headerNavContainer {
-    width: 380px;
-    height: 50px;
-
+.navBar {
+    width: 40px;
+    height: 40px;
     grid-column-start: 4;
     grid-row-start: 2;
+    position: relative;
+}
 
-    display: grid;
-    grid-template-columns: 120px 10px 120px 10px 120px;
+.checkbox, .iconsNavBar {
+    position: absolute;
+    cursor: pointer;
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.iconsNavBar {
+    width: 40px;
+    pointer-events: none;
+}
+
+.checkbox {
+    width: 40px;
+    opacity: 0;
+}
+
+.iconX {
+    display: none;
+}
+
+.checkbox:checked ~ .iconMenu {
+    display: none;
+}
+
+.checkbox:checked ~ .iconX {
+    display: block;
+}
+
+.menu {
+    width: 180px;
+    position: absolute;
+    left: 70px;
+    top: 55px;
+
+
     transition: .6s;
-
-    &:hover .headerItems .menuLink {
-        transform: scale(1.05);
-        opacity: 0.95;
-        filter: blur(3px);
-        text-shadow: 0px 0px 4px #0000005d;
-    }
-
-    .headerItems .menuLink:hover {
-        transform: scale(1.5);
-        opacity: 1;
-        filter: blur(0px);
-        text-shadow: 0px 0px 3px #0000005d, 0px 0px 8px #fcfbfb;
-    }
 }
 
-.headerItems {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 25px;
-    color: #0a2c48;
-    font-weight: 600;
+.menu li {
     list-style: none;
-    text-align: center;
-    line-height: 43px;
+    background-color: rgba(215, 243, 250, 0.808);
 }
 
-.menuLink {
+.menu li a {
     text-decoration: none;
     color: #0a2c48;
-    transition: 1s;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 23px;
+    margin: 15px;
+    line-height: 40px;
 }
 
-.itemAcerca {
-    grid-column-start: 1;
+.checkbox:checked ~ .menu {
+    left: -125px;
 }
 
-.itemProyectos {
-    grid-column-start: 3;
-}
-
-.itemContacto {
-    grid-column-start: 5;
-}

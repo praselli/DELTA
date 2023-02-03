@@ -14,6 +14,7 @@ body {
   width: 100%;
   height: 100vh;
   background-size: cover;
+  background-color: white;
   z-index: 0;
   animation-name: backgroundSlide;
   animation-duration: 60s;
@@ -49,37 +50,37 @@ body {
 /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
 @keyframes backgroundSlide {
   0% {
-    background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    background-image: url(../img/img/imgSlide/01.png);
   }
   17% {
-    background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    background-image: url(../img/img/imgSlide/01.png);
   }
   20% {
-    background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+    background-image: url(../img/img/imgSlide/02.png);
   }
   37% {
-    background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+    background-image: url(../img/img/imgSlide/02.png);
   }
   40% {
-    background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+    background-image: url(../img/img/imgSlide/03.png);
   }
   57% {
-    background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+    background-image: url(../img/img/imgSlide/03.png);
   }
   60% {
-    background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+    background-image: url(../img/img/imgSlide/04.png);
   }
   77% {
-    background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+    background-image: url(../img/img/imgSlide/04.png);
   }
   80% {
-    background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+    background-image: url(../img/img/imgSlide/05.png);
   }
   97% {
-    background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+    background-image: url(../img/img/imgSlide/05.png);
   }
   100% {
-    background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+    background-image: url(../img/img/imgSlide/01.png);
   }
 }
 .boxLogo {
@@ -311,32 +312,28 @@ body {
 }
 header {
   width: 100%;
-  height: 70px;
+  height: 60px;
   z-index: 2;
   border-bottom: 3px solid rgba(56, 56, 56, 0.212);
   top: 0;
   background-color: rgba(255, 255, 255, 0.164);
   transition: 1s;
   display: grid;
-  grid-template-columns: 20px 170px auto 380px 20px;
-  grid-template-rows: 10px 50px 10px;
+  grid-template-columns: 20px 140px auto 40px 20px;
+  grid-template-rows: 10px 40px 10px;
   grid-column: 1/-1;
-}
-header:hover {
-  background-color: rgba(255, 255, 255, 0.662745098);
-  box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.39);
 }
 
 .headerLogoA {
-  width: 170px;
-  height: 50px;
+  width: 140px;
+  height: 40px;
   position: relative;
   grid-column-start: 2;
   grid-row-start: 2;
 }
 
 .headerLogo {
-  width: 170px;
+  width: 140px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -344,62 +341,75 @@ header:hover {
   right: 0;
   margin: auto;
 }
-.headerLogo:hover {
-  filter: drop-shadow(0px 0px 8px white);
-}
 
-.itemMenu {
+.headerNavContainer, .headerItems, .itemAcerca, .itemDesarrollos, .itemContacto, .menuLink {
   display: none;
 }
 
-.headerNavContainer {
-  width: 380px;
-  height: 50px;
+.navBar {
+  width: 40px;
+  height: 40px;
   grid-column-start: 4;
   grid-row-start: 2;
-  display: grid;
-  grid-template-columns: 120px 10px 120px 10px 120px;
+  position: relative;
+}
+
+.checkbox, .iconsNavBar {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.iconsNavBar {
+  width: 40px;
+  pointer-events: none;
+}
+
+.checkbox {
+  width: 40px;
+  opacity: 0;
+}
+
+.iconX {
+  display: none;
+}
+
+.checkbox:checked ~ .iconMenu {
+  display: none;
+}
+
+.checkbox:checked ~ .iconX {
+  display: block;
+}
+
+.menu {
+  width: 180px;
+  position: absolute;
+  left: 70px;
+  top: 55px;
   transition: 0.6s;
 }
-.headerNavContainer:hover .headerItems .menuLink {
-  transform: scale(1.05);
-  opacity: 0.95;
-  filter: blur(3px);
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3647058824);
-}
-.headerNavContainer .headerItems .menuLink:hover {
-  transform: scale(1.5);
-  opacity: 1;
-  filter: blur(0px);
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3647058824), 0px 0px 8px #fcfbfb;
-}
 
-.headerItems {
-  font-family: "Quicksand", sans-serif;
-  font-size: 25px;
-  color: #0a2c48;
-  font-weight: 600;
+.menu li {
   list-style: none;
-  text-align: center;
-  line-height: 43px;
+  background-color: rgba(215, 243, 250, 0.808);
 }
 
-.menuLink {
+.menu li a {
   text-decoration: none;
   color: #0a2c48;
-  transition: 1s;
+  font-family: "Quicksand", sans-serif;
+  font-size: 23px;
+  margin: 15px;
+  line-height: 40px;
 }
 
-.itemAcerca {
-  grid-column-start: 1;
-}
-
-.itemProyectos {
-  grid-column-start: 3;
-}
-
-.itemContacto {
-  grid-column-start: 5;
+.checkbox:checked ~ .menu {
+  left: -125px;
 }
 
 @font-face {
@@ -411,6 +421,7 @@ header:hover {
   src: url(../fonts/Cavilant.otf);
 }
 @media (min-width: 500px) {
+  /* - - - - - - - INDEX - - - - - - - */
   .masterBoxIndex {
     display: grid;
     grid-template-columns: 35px 140px 14px 245px 35px auto 14px;
@@ -441,37 +452,37 @@ header:hover {
   /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
   @keyframes backgroundSlide {
     0% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+      background-image: url(../img/img/imgSlide/01.png);
     }
     17% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+      background-image: url(../img/img/imgSlide/01.png);
     }
     20% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+      background-image: url(../img/img/imgSlide/02.png);
     }
     37% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+      background-image: url(../img/img/imgSlide/02.png);
     }
     40% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+      background-image: url(../img/img/imgSlide/03.png);
     }
     57% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+      background-image: url(../img/img/imgSlide/03.png);
     }
     60% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+      background-image: url(../img/img/imgSlide/04.png);
     }
     77% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+      background-image: url(../img/img/imgSlide/04.png);
     }
     80% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+      background-image: url(../img/img/imgSlide/05.png);
     }
     97% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+      background-image: url(../img/img/imgSlide/05.png);
     }
     100% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+      background-image: url(../img/img/imgSlide/01.png);
     }
   }
   .boxLogo {
@@ -512,10 +523,99 @@ header:hover {
   }
 }
 @media (min-width: 690px) {
+  /* - - - - - - - HEADER - - - - - - - */
+  header {
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    border-bottom: 3px solid rgba(56, 56, 56, 0.212);
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.164);
+    transition: 1s;
+    display: grid;
+    grid-template-columns: 20px 140px auto 430px 20px;
+    grid-template-rows: 10px 50px 10px;
+    grid-column: 1/-1;
+  }
+  header:hover {
+    background-color: rgba(255, 255, 255, 0.662745098);
+    box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.39);
+  }
+  .headerLogoA {
+    width: 140px;
+    height: 50px;
+    position: relative;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .headerLogo {
+    width: 140px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .headerLogo:hover {
+    filter: drop-shadow(0px 0px 8px white);
+  }
+  .navBar {
+    display: none;
+  }
+  .headerNavContainer {
+    width: 430px;
+    height: 50px;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 120px 10px 170px 10px 120px;
+    transition: 0.6s;
+  }
+  .headerNavContainer:hover .headerItems .menuLink {
+    transform: scale(1.05);
+    opacity: 0.95;
+    filter: blur(3px);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3647058824);
+  }
+  .headerNavContainer .headerItems .menuLink:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(0px);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3647058824), 0px 0px 8px #fcfbfb;
+  }
+  .headerItems {
+    display: block;
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
+    color: #0a2c48;
+    font-weight: 600;
+    list-style: none;
+    text-align: center;
+    line-height: 43px;
+  }
+  .menuLink {
+    display: block;
+    text-decoration: none;
+    color: #0a2c48;
+    transition: 1s;
+  }
+  .itemAcerca {
+    display: block;
+    grid-column-start: 1;
+  }
+  .itemDesarrollos {
+    display: block;
+    grid-column-start: 3;
+  }
+  .itemContacto {
+    display: block;
+    grid-column-start: 5;
+  }
   /* - - - - - - - INDEX - - - - - - - */
   .masterBoxIndex {
     display: grid;
-    grid-template-columns: 50px 200px 20px 350px 50px auto 20px;
+    grid-template-columns: auto 200px 20px 350px 50px auto;
     grid-template-rows: 70px 100px 30px 90px 10px 40px 10px auto;
     /* 
     grid-template-columns:
@@ -543,37 +643,37 @@ header:hover {
   /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
   @keyframes backgroundSlide {
     0% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+      background-image: url(../img/img/imgSlide/01.png);
     }
     17% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+      background-image: url(../img/img/imgSlide/01.png);
     }
     20% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+      background-image: url(../img/img/imgSlide/02.png);
     }
     37% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);
+      background-image: url(../img/img/imgSlide/02.png);
     }
     40% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+      background-image: url(../img/img/imgSlide/03.png);
     }
     57% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);
+      background-image: url(../img/img/imgSlide/03.png);
     }
     60% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+      background-image: url(../img/img/imgSlide/04.png);
     }
     77% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);
+      background-image: url(../img/img/imgSlide/04.png);
     }
     80% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+      background-image: url(../img/img/imgSlide/05.png);
     }
     97% {
-      background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);
+      background-image: url(../img/img/imgSlide/05.png);
     }
     100% {
-      background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);
+      background-image: url(../img/img/imgSlide/01.png);
     }
   }
   .boxLogo {

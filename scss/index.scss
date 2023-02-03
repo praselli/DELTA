@@ -5,6 +5,7 @@
     height: 100vh;
 
     background-size: cover;
+    background-color: white;
     z-index: 0;
 
     animation-name: backgroundSlide;
@@ -44,27 +45,27 @@
 
 @keyframes backgroundSlide {
 
-    0% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+    0% {background-image: url(../img/img/imgSlide/01.png);}
 
-    17% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+    17% {background-image: url(../img/img/imgSlide/01.png);}
 
-    20% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);}
+    20% {background-image: url(../img/img/imgSlide/02.png);}
 
-    37% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_1.jpg);}
+    37% {background-image: url(../img/img/imgSlide/02.png);}
 
-    40% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);}
+    40% {background-image: url(../img/img/imgSlide/03.png);}
 
-    57% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_7.jpg);}
+    57% {background-image: url(../img/img/imgSlide/03.png);}
     
-    60% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);}
+    60% {background-image: url(../img/img/imgSlide/04.png);}
 
-    77% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_13.jpg);}
+    77% {background-image: url(../img/img/imgSlide/04.png);}
 
-    80% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);}
+    80% {background-image: url(../img/img/imgSlide/05.png);}
 
-    97% {background-image: url(../img/img/centro-de-visitantes-fundacion-luis-munoz-marin-toro-arquitectos_4.jpg);}
+    97% {background-image: url(../img/img/imgSlide/05.png);}
 
-    100% {background-image: url(../img/img/big-trees-small-plants-house-read-studio_10.jpg);}
+    100% {background-image: url(../img/img/imgSlide/01.png);}
 }
 
 .boxLogo {
