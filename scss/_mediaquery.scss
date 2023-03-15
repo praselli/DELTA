@@ -1,0 +1,382 @@
+
+
+@media (min-width: 500px) {
+    
+    /* - - - - - - - INDEX - - - - - - - */
+
+     .masterBoxIndex {
+        width: 100%;
+        height: 100vh;
+    
+        background-size: cover;
+        background-color: white;
+        z-index: 0;
+    
+        animation-name: backgroundSlide;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+    
+        transition: 2s;
+        display: grid;
+        grid-template-columns: auto 140px 14px 245px 35px auto;
+        grid-template-rows: 70px 80px 21px 63px 7px 28px 7px auto;
+    
+        /* 
+        grid-template-columns:
+            35px: espacio vacio
+            140px: ancho logo
+            14: margen
+            245px: ancho deltaBox
+            35px: espacio vacio
+            auto: espacio informacion home
+            14px: margen
+
+        grid-template-rows:
+            70px: header
+            80px: espacio vacio
+            --------------------
+            21px: margen
+            63px: DELTA
+            7px: margen
+            28px: DESARROLLADORA
+            7px: margen
+            --------------------
+            auto: espacio vacio
+        */
+    }
+    
+    /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
+    
+    @keyframes backgroundSlide {
+    
+        0% {background-image: url(../img/img/imgSlide/01.png);}
+
+        17% {background-image: url(../img/img/imgSlide/01.png);}
+    
+        20% {background-image: url(../img/img/imgSlide/02.png);}
+    
+        37% {background-image: url(../img/img/imgSlide/02.png);}
+    
+        40% {background-image: url(../img/img/imgSlide/03.png);}
+    
+        57% {background-image: url(../img/img/imgSlide/03.png);}
+        
+        60% {background-image: url(../img/img/imgSlide/04.png);}
+    
+        77% {background-image: url(../img/img/imgSlide/04.png);}
+    
+        80% {background-image: url(../img/img/imgSlide/05.png);}
+    
+        97% {background-image: url(../img/img/imgSlide/05.png);}
+    
+        100% {background-image: url(../img/img/imgSlide/01.png);}
+    }
+    
+    .boxLogo {
+        width: 140px;
+        height: 126px;
+        grid-column-start: 2;
+        grid-row: 3 / 8;
+    }
+    
+    .franja1 {
+        left: -70px;
+        transform: translateY(70px);
+    }
+    
+    .franja2 {
+        right: 70px;
+        transform: translateY(-70px);
+    }
+    
+    .franja3 { transform: translateX(-70px); }
+
+    .deltaTextBox {
+        width: 245px;
+        height: 63px;
+   
+        grid-column-start: 4;
+        grid-row-start: 4;
+    }
+    
+    .detaText { height: 63px; }
+    
+    .e { transform: translateX(6px); }
+    
+    .l { transform: translateX(12px); }
+    
+    .a { transform: translateX(-9px); }
+       
+    .desarrolladoraText {
+        width: 98%;       
+    
+        margin: auto;
+        transform: translateX(3px);
+        opacity: 0;
+    
+        grid-column-start: 4;
+        grid-row-start: 6;
+    
+        animation: desarrolladora;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+    }    
+
+    .textoIndex {
+        margin-left: 50px;
+        margin-right: 70px;
+    }
+
+}
+
+@media (min-width: 690px) {
+
+    /* - - - - - - - HEADER - - - - - - - */
+
+    header {
+        width: 100%;
+        height: 70px;
+        z-index: 2;
+        border-bottom: 3px solid rgba(56, 56, 56, 0.212);
+        top: 0;
+    
+        background-color: rgba(255, 255, 255, 0.164);
+        transition: 1s;
+    
+        display: grid;
+        grid-template-columns: 20px 140px auto 430px 20px;
+        grid-template-rows: 10px 50px 10px;
+    
+        grid-column: 1 / -1;
+    
+        &:hover {
+            background-color: #ffffffa9;
+            box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.39);
+        }
+    }
+    
+    .headerLogoA {
+        width: 140px;
+        height: 50px;
+    
+        position: relative;
+    
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+    
+    .headerLogo {
+        width: 140px;
+        position: absolute;
+    
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    
+        &:hover {
+            filter: drop-shadow(0px 0px 8px white);
+        }
+    }
+    
+    .navBar {
+        display: none;
+    }
+    
+    .headerNavContainer {
+        width: 430px;
+        height: 50px;
+    
+        grid-column-start: 4;
+        grid-row-start: 2;
+    
+        display: grid;
+        grid-template-columns: 120px 10px 170px 10px 120px;
+        transition: .6s;
+    
+        &:hover .headerItems .menuLink {
+            transform: scale(1.05);
+            opacity: 0.95;
+            filter: blur(3px);
+            text-shadow: 0px 0px 4px #0000005d;
+        }
+    
+        .headerItems .menuLink:hover {
+            transform: scale(1.5);
+            opacity: 1;
+            filter: blur(0px);
+            text-shadow: 0px 0px 3px #0000005d, 0px 0px 8px #fcfbfb;
+        }
+    }
+    
+    .headerItems {
+        display: block;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+        color: #0a2c48;
+        font-weight: 600;
+        list-style: none;
+        text-align: center;
+        line-height: 43px;
+    }
+    
+    .menuLink {
+        display: block;
+        text-decoration: none;
+        color: #0a2c48;
+        transition: 1s;
+    }
+    
+    .itemAcerca {
+        display: block;
+        grid-column-start: 1;
+    }
+    
+    .itemDesarrollos {
+        display: block;
+        grid-column-start: 3;
+    }
+    
+    .itemContacto {
+        display: block;
+        grid-column-start: 5;
+    }
+
+
+
+
+
+    /* - - - - - - - INDEX - - - - - - - */
+
+    .masterBoxIndex {
+        width: 100%;
+        height: 100vh;
+    
+        background-size: cover;
+        background-color: white;
+        z-index: 0;
+    
+        animation-name: backgroundSlide;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+    
+        transition: 2s;
+        display: grid;
+        grid-template-columns: auto 200px 20px 350px 50px auto;
+        grid-template-rows: 70px 100px 30px 90px 10px 40px 10px auto;
+    
+        /* 
+        grid-template-columns:
+            50px: espacio vacio
+            200px: ancho logo
+            20px: margen
+            350px: ancho deltaBox
+            50px: espacio vacio
+            auto: espacio informacion home
+            20px: margen
+        
+        grid-template-rows:
+            70px: header
+            auto: espacio vacio
+            --------------------
+            30px: margen
+            90px: DELTA
+            10px: margen
+            40px: DESARROLLADORA
+            10px: margen
+            --------------------
+            auto: espacio vacio
+        */
+    }
+    
+    /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
+    
+    @keyframes backgroundSlide {
+    
+        0% {background-image: url(../img/img/imgSlide/01.png);}
+
+        17% {background-image: url(../img/img/imgSlide/01.png);}
+    
+        20% {background-image: url(../img/img/imgSlide/02.png);}
+    
+        37% {background-image: url(../img/img/imgSlide/02.png);}
+    
+        40% {background-image: url(../img/img/imgSlide/03.png);}
+    
+        57% {background-image: url(../img/img/imgSlide/03.png);}
+        
+        60% {background-image: url(../img/img/imgSlide/04.png);}
+    
+        77% {background-image: url(../img/img/imgSlide/04.png);}
+    
+        80% {background-image: url(../img/img/imgSlide/05.png);}
+    
+        97% {background-image: url(../img/img/imgSlide/05.png);}
+    
+        100% {background-image: url(../img/img/imgSlide/01.png);}
+    }
+    
+    .boxLogo {
+        width: 200px;
+        height: 180px;
+        grid-column-start: 2;
+        grid-row: 3 / 8;
+    }
+    
+    .franja1 {
+        left: -100px;
+        transform: translateY(100px);
+    }
+       
+    .franja2 {
+        right: 100px;
+        transform: translateY(-100px);
+    }
+    
+    .franja3 {
+        width: 100%;
+        transform: translateX(-100px);
+    }
+    
+    .deltaTextBox {
+        width: 350px;
+        height: 90px;
+
+        grid-column-start: 4;
+        grid-row-start: 4;
+    }
+    
+    .detaText { height: 90px; }
+    
+    .e { transform: translateX(8px); }
+
+    
+    .l { transform: translateX(16px); }
+    
+    .a { transform: translateX(-13px); }     
+    
+ 
+    .desarrolladoraText {
+        width: 98%;       
+    
+        margin: auto;
+        transform: translateX(5px);
+        opacity: 0;
+    
+        grid-column-start: 4;
+        grid-row-start: 6;
+    
+        animation: desarrolladora;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+    }    
+
+    .textoIndex {
+        margin-left: 80px;
+        margin-right: 100px;
+    }
+
+}
