@@ -2,7 +2,7 @@
 
 .masterBoxIndex {
     width: 100%;
-    height: 1100px;
+    height: 100vh;
 
     background-size: cover;
     background-color: white;
@@ -15,7 +15,7 @@
     transition: 2s;
     display: grid;
     grid-template-columns: auto 250px auto;
-    grid-template-rows: 60px 120px 225px 25px 65px 5px 30px 50px 350px auto;
+    grid-template-rows: 60px 120px 225px 25px 65px 5px 30px auto 55px;
 
     overflow: hidden;
 
@@ -38,11 +38,9 @@
         5px: margen
         30px: DESARROLLADORA
         --------------------
-        50px: espacio vacio
-        --------------------
-        auto: .textoIndex
-        --------------------
         auto: espacio vacio
+        --------------------
+        55px: footer
     */
 }
 
@@ -345,36 +343,4 @@
         opacity: 1;
         filter: drop-shadow( 0px 2px 4px rgba(0, 0, 0, 0.356));
     }
-}
-
-.textoIndex {
-
-    font-family: Corbel;
-    color: #0a2c48;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    margin-left: 40px;
-    margin-right: 60px;
-    opacity: 0;
-
-    grid-column: 1 / -1;
-    grid-row-start: 9;
-
-    animation: textoIndexAni;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 6s;
-}
-
-@keyframes textoIndexAni {
-    
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
 }

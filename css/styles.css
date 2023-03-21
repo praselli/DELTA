@@ -12,7 +12,7 @@ body {
 
 .masterBoxIndex {
   width: 100%;
-  height: 1100px;
+  height: 100vh;
   background-size: cover;
   background-color: white;
   z-index: 0;
@@ -22,7 +22,7 @@ body {
   transition: 2s;
   display: grid;
   grid-template-columns: auto 250px auto;
-  grid-template-rows: 60px 120px 225px 25px 65px 5px 30px 50px 350px auto;
+  grid-template-rows: 60px 120px 225px 25px 65px 5px 30px auto 55px;
   overflow: hidden;
   /* 
   grid-template-columns:
@@ -43,11 +43,9 @@ body {
       5px: margen
       30px: DESARROLLADORA
       --------------------
-      50px: espacio vacio
-      --------------------
-      auto: .textoIndex
-      --------------------
       auto: espacio vacio
+      --------------------
+      55px: footer
   */
 }
 
@@ -313,31 +311,6 @@ body {
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.356));
   }
 }
-.textoIndex {
-  font-family: Corbel;
-  color: #0a2c48;
-  font-size: 20px;
-  line-height: 25px;
-  text-align: center;
-  margin-left: 40px;
-  margin-right: 60px;
-  opacity: 0;
-  grid-column: 1/-1;
-  grid-row-start: 9;
-  animation: textoIndexAni;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 6s;
-}
-
-@keyframes textoIndexAni {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 header {
   width: 100%;
   height: 60px;
@@ -462,7 +435,7 @@ header {
     transition: 2s;
     display: grid;
     grid-template-columns: auto 140px 14px 245px 35px auto;
-    grid-template-rows: 70px 80px 21px 63px 7px 28px 7px auto;
+    grid-template-rows: 70px 80px 21px 63px 7px 28px 7px auto 55px;
     /* 
     grid-template-columns:
         35px: espacio vacio
@@ -484,6 +457,8 @@ header {
         7px: margen
         --------------------
         auto: espacio vacio
+        --------------------
+        55px: footer
     */
   }
   /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
@@ -569,10 +544,6 @@ header {
     animation-fill-mode: forwards;
     animation-delay: 4s;
   }
-  .textoIndex {
-    margin-left: 50px;
-    margin-right: 70px;
-  }
 }
 @media (min-width: 690px) {
   /* - - - - - - - HEADER - - - - - - - */
@@ -631,7 +602,7 @@ header {
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3647058824);
   }
   .headerNavContainer .headerItems .menuLink:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     opacity: 1;
     filter: blur(0px);
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3647058824), 0px 0px 8px #fcfbfb;
@@ -677,7 +648,7 @@ header {
     transition: 2s;
     display: grid;
     grid-template-columns: auto 200px 20px 350px 50px auto;
-    grid-template-rows: 70px 100px 30px 90px 10px 40px 10px auto;
+    grid-template-rows: 70px 100px 30px 90px 10px 40px 10px auto 55px;
     /* 
     grid-template-columns:
         50px: espacio vacio
@@ -699,6 +670,8 @@ header {
         10px: margen
         --------------------
         auto: espacio vacio
+        --------------------
+        55px: footer
     */
   }
   /* CUANDO HAGA LOS MEDIAQUERYS PARA VISTA DE TELEFONO USAR FOTOS VERTICALES */
@@ -785,9 +758,61 @@ header {
     animation-fill-mode: forwards;
     animation-delay: 4s;
   }
-  .textoIndex {
-    margin-left: 80px;
-    margin-right: 100px;
+}
+.footer {
+  width: 100%;
+  height: 55px;
+  background-color: rgba(130, 145, 140, 0.445);
+  box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.39);
+  border-top: 2px solid rgba(0, 0, 0, 0.24);
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 10% 40%;
+  bottom: 0;
+  grid-column: 1/-1;
+  grid-row-start: 9;
+}
+
+.footerTexBox {
+  width: 100%;
+  height: 100%;
+  grid-column-start: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerTex {
+  color: rgb(80, 80, 80);
+  font-size: 14px;
+  text-align: center;
+  font-family: Corbel;
+}
+
+.footerIconsBox {
+  width: 100%;
+  height: 100%;
+  grid-column-start: 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerIcon {
+  height: 20px;
+  filter: drop-shadow(0 0 3px black);
+}
+
+@media (min-width: 500px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+  }
+}
+@media (min-width: 690px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
   }
 }
 
