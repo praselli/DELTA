@@ -21,14 +21,14 @@ body {
   animation-iteration-count: infinite;
   transition: 2s;
   display: grid;
-  grid-template-columns: auto 250px auto;
-  grid-template-rows: 60px 120px 225px 25px 65px 5px 30px auto 55px;
+  grid-template-columns: auto 200px auto;
+  grid-template-rows: 60px 120px 180px 25px 50px 5px 20px auto 55px;
   overflow: hidden;
   /* 
   grid-template-columns:
       auto: espacio vacio
       --------------------
-      250px: .boxLogo
+      200px: .boxLogo
       --------------------
       auto: espacio vacio
 
@@ -37,11 +37,11 @@ body {
       --------------------
       120: espacio vacio
       --------------------
-      225px: .boxLogo
+      180px: .boxLogo
       25px: margen
-      65px: DELTA
+      50px: DELTA
       5px: margen
-      30px: DESARROLLADORA
+      20px: DESARROLLADORA
       --------------------
       auto: espacio vacio
       --------------------
@@ -86,8 +86,8 @@ body {
   }
 }
 .boxLogo {
-  width: 250px;
-  height: 225px;
+  width: 200px;
+  height: 180px;
   grid-column-start: 2;
   grid-row-start: 3;
   position: relative;
@@ -171,8 +171,8 @@ body {
   }
 }
 .deltaTextBox {
-  width: 250px;
-  height: 65px;
+  width: 200px;
+  height: 50px;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-column-start: 2;
@@ -180,7 +180,7 @@ body {
 }
 
 .detaText {
-  height: 65px;
+  height: 50px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -435,7 +435,7 @@ header {
     transition: 2s;
     display: grid;
     grid-template-columns: auto 140px 14px 245px 35px auto;
-    grid-template-rows: 70px 80px 21px 63px 7px 28px 7px auto 55px;
+    grid-template-rows: 70px auto 21px 63px 7px 28px 7px auto 55px;
     /* 
     grid-template-columns:
         35px: espacio vacio
@@ -447,7 +447,7 @@ header {
         14px: margen
 
     grid-template-rows:
-        70px: header
+        auto: header
         80px: espacio vacio
         --------------------
         21px: margen
@@ -648,7 +648,7 @@ header {
     transition: 2s;
     display: grid;
     grid-template-columns: auto 200px 20px 350px 50px auto;
-    grid-template-rows: 70px 100px 30px 90px 10px 40px 10px auto 55px;
+    grid-template-rows: 70px auto 30px 90px 10px 40px 10px auto 55px;
     /* 
     grid-template-columns:
         50px: espacio vacio
@@ -762,9 +762,9 @@ header {
 .footer {
   width: 100%;
   height: 55px;
-  background-color: rgba(130, 145, 140, 0.445);
-  box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.39);
-  border-top: 2px solid rgba(0, 0, 0, 0.24);
+  background-color: rgba(130, 145, 140, 0.144);
+  box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.199);
+  /*border-top: 2px solid rgba(0, 0, 0, 0.24);*/
   position: relative;
   display: grid;
   grid-template-columns: 50% 10% 40%;
@@ -803,6 +803,7 @@ header {
   filter: drop-shadow(0 0 3px black);
 }
 
+/*------------------------MEDIAQUERYS-------------------------*/
 @media (min-width: 500px) {
   .footer {
     display: grid;
